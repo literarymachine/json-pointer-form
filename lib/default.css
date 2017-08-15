@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding-top: 10px;
+  display: table;
+}
+
+div.input.\@value {
+  width: 80%;
+  display: inline-block;
+  min-width: 400px;
+}
+
+div.select.\@language {
+  width: 20%;
+  display: inline-block;
+}
+
+div.input.lat,
+div.input.lon {
+  width: 50%;
+  display: inline-block;
+}
+
+select, input, textarea {
+  width: 100%;
+}
+
+input[type=checkbox] {
+  width: 10px;
+}
+
+div.checkbox {
+  display: inline-block;
+}
+
+div.input,
+div.select {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 5px 0;
+}
+
+div.input span.label {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.\@value {
+  flex: 1 400px;
+}
+
+div.input.\@value span.label,
+div.textarea.\@value span.label,
+div.select.\@language span {
+  display: none;
+}
+
+div.textarea.\@value+div.select.\@language {
+  display: block;
+  width: 100%;
+}
+
+.error {
+  color: tomato;
+}
+
+form>.\@context,
+.select.\@type,
+form>.\@id,
+.location label {
+  display: none;
+}
+
+
+::-webkit-input-placeholder {opacity: 0;}
+::-moz-placeholder          {opacity: 0;}
+:-moz-placeholder           {opacity: 0;}
+:-ms-input-placeholder      {opacity: 0;}
+
+.location ::-webkit-input-placeholder {opacity: 1;}
+.location ::-moz-placeholder          {opacity: 1;}
+.location :-moz-placeholder           {opacity: 1;}
+.location :-ms-input-placeholder      {opacity: 1;}
+
+.\@id input[type=checkbox] {
+  display: none;
+}
+
+.input.\@id ul li>label,
+.checkbox.\@id>label {
+  display: block;
+  border: 1px solid black;
+}
+
+.input.\@id ul li>label:hover,
+.checkbox.\@id>label:hover {
+  background-color: #DDD;
+}
+
+.input.\@id ul li>label:after {
+  font-family: FontAwesome;
+  content: '\f00c';
+  float: right;
+}
+
+.checkbox.\@id>label:after {
+  font-family: FontAwesome;
+  content: '\f00d';
+  float: right;
+}
+
+.input.\@id ul li,
+fieldset .input.\@id,
+.checkbox.\@id {
+  display: block;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.input.\@id ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.multiple-container>div:not([class]) label {
+  display: none;
+}
+
+.multiple-container>div:not([class]):first-child label {
+  display: block;
+}
