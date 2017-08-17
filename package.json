@@ -4,8 +4,8 @@
   "description": "Component library for isomorphic HTML forms",
   "main": "build/index.js",
   "scripts": {
-    "build": "babel lib -d build",
-    "test": "npm install",
+    "build": "./node_modules/.bin/babel lib -d build",
+    "test": "ls build",
     "install": "npm run build"
   },
   "keywords": [],
