@@ -2,146 +2,154 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 560px;
-  margin-left: auto;
-  margin-right: auto;
+.Forms form::after {
+  content: '';
+  display: block;
+  clear: both;
 }
-
-fieldset {
-  border: 0;
+.Forms ::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+.Forms ::-moz-placeholder {
+  text-transform: capitalize;
+}
+.Forms :-ms-input-placeholder {
+  text-transform: capitalize;
+}
+.Forms ::placeholder {
+  text-transform: capitalize;
+}
+.Forms fieldset {
   padding: 0;
   margin: 0;
+  border: none;
+  clear: both;
 }
-
-legend {
-  padding-top: 10px;
-  display: table;
+.Forms input[type=text],
+.Forms textarea {
+  padding: 10px 5px;
 }
-
-div.input.\@value {
-  width: 80%;
-  display: inline-block;
-  min-width: 400px;
+.Forms input[type=submit],
+.Forms select {
+  padding: 10px 5px;
 }
-
-div.select.\@language {
-  width: 20%;
-  display: inline-block;
+.Forms input[type=submit] {
+  margin-top: 15px;
+  padding: 10px;
+  float: right;
 }
-
-div.input.lat,
-div.input.lon {
-  width: 50%;
-  display: inline-block;
+.Forms legend {
+  padding: 10px 0;
 }
-
-select, input, textarea {
-  width: 100%;
-}
-
-input[type=checkbox] {
-  width: 10px;
-}
-
-div.checkbox {
-  display: inline-block;
-}
-
-div.input,
-div.select {
+.Forms form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
-  padding: 5px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
 }
-
-div.input span.label {
-  display: inline-block;
-  padding: 5px 0;
+.Forms form div > label {
+  padding: 10px 0;
 }
-
-.\@value {
-  flex: 1 400px;
-}
-
-div.input.\@value span.label,
-div.textarea.\@value span.label,
-div.select.\@language span {
-  display: none;
-}
-
-div.textarea.\@value+div.select.\@language {
-  display: block;
-  width: 100%;
-}
-
-.error {
-  color: tomato;
-}
-
-form>.\@context,
-.select.\@type,
-form>.\@id,
-.location label {
-  display: none;
-}
-
-
-::-webkit-input-placeholder {opacity: 0;}
-::-moz-placeholder          {opacity: 0;}
-:-moz-placeholder           {opacity: 0;}
-:-ms-input-placeholder      {opacity: 0;}
-
-.location ::-webkit-input-placeholder {opacity: 1;}
-.location ::-moz-placeholder          {opacity: 1;}
-.location :-moz-placeholder           {opacity: 1;}
-.location :-ms-input-placeholder      {opacity: 1;}
-
-.\@id input[type=checkbox] {
-  display: none;
-}
-
-.input.\@id ul li>label,
-.checkbox.\@id>label {
-  display: block;
-  border: 1px solid black;
-}
-
-.input.\@id ul li>label:hover,
-.checkbox.\@id>label:hover {
-  background-color: #DDD;
-}
-
-.input.\@id ul li>label:after {
-  font-family: FontAwesome;
-  content: '\f00c';
-  float: right;
-}
-
-.checkbox.\@id>label:after {
-  font-family: FontAwesome;
-  content: '\f00d';
-  float: right;
-}
-
-.input.\@id ul li,
-fieldset .input.\@id,
-.checkbox.\@id {
-  display: block;
-  padding-top: 5px;
-  width: 100%;
-}
-
-.input.\@id ul {
-  list-style-type: none;
-  padding: 0;
+.Forms form div ul {
   margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  width: 100%;
+  max-height: 160px;
+  overflow: auto;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  border: 1px solid black;
+  z-index: 3;
 }
-
-.multiple-container>div:not([class]) label {
+.Forms form div ul li input[type=checkbox] {
   display: none;
 }
-
-.multiple-container>div:not([class]):first-child label {
+.Forms form div ul li:last-child label {
+  border-bottom: none;
+}
+.Forms form div ul li label {
   display: block;
+  padding: 10px 5px;
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+.Forms form div ul li label::after {
+  content: '✔';
+  position: absolute;
+  right: 15px;
+}
+.Forms form > div {
+  margin: 10px 0;
+}
+.Forms .checkbox input[type=checkbox] {
+  display: none;
+}
+.Forms .checkbox label {
+  display: block;
+  padding: 10px 5px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.Forms .checkbox label::after {
+  content: 'x';
+  position: absolute;
+  right: 15px;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.Forms .dropdown {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.Forms .multiple-container .input:first-child input {
+  margin-top: 0;
+}
+.Forms .multiple-container .input:first-child label.title {
+  display: block;
+}
+.Forms .multiple-container .input input {
+  margin-top: 5px;
+}
+.Forms .multiple-container .input input[placeholder="sameAs"] + label {
+  display: none;
+}
+.Forms .select {
+  margin-top: 10px;
+}
+.Forms .select label {
+  display: none;
+}
+.Forms .hidden {
+  display: none;
 }
