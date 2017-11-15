@@ -1,0 +1,116 @@
+{
+  "@context": "https://oerworldmap.org/assets/json/context.json",
+  "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/",
+  "@type": "ConceptScheme",
+  "hasTopConcept": [
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "narrower": [
+        {
+          "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/peerTutor",
+          "@type": "Concept",
+          "broader": {
+            "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/student"
+          },
+          "inScheme": {
+            "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+          },
+          "name": [
+            {
+              "@language": "en",
+              "@value": "peer tutor"
+            }
+          ]
+        }
+      ],
+      "name": [
+        {
+          "@language": "en",
+          "@value": "student"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/parent",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "parent"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/mentor",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "mentor"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/generalPublic",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "general public"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/teacher",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "teacher"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/administrator",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "administrator"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/professional",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/educationalAudienceRole/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "professional"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "@context": "https://oerworldmap.org/assets/json/context.json",
+  "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/",
+  "@type": "ConceptScheme",
+  "hasTopConcept": [
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/expositive",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "expositive"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/mixed",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "mixed"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/active",
+      "@type": "Concept",
+      "inScheme": {
+        "@id": "http://purl.org/dcx/lrmi-vocabs/interactivityType/"
+      },
+      "name": [
+        {
+          "@language": "en",
+          "@value": "active"
+        }
+      ]
+    }
+  ]
+}

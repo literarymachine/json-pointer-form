@@ -1,0 +1,82 @@
+pre {
+ white-space: pre-wrap;
+}
+
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.Forms div > label.title {
+  display: none;
+}
+
+label + input {
+  margin: 5px 0;
+}
+
+fieldset:not(.multiple-container)>fieldset.multiple-container {
+  background-color: #EFEFEF;
+}
+
+fieldset:not(.multiple-container) {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.Forms input,
+.Forms button,
+.Forms button.toggleDropdown {
+  background: transparent;
+}
+
+#columns {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+#form, #json {
+  flex: 1;
+  padding: 0 10px;
+  border: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+
+#json {
+  flex: 2;
+}
+
+#wrapper {
+  padding-bottom: 10px;
+}
+
+#header form {
+  display: flex;
+}
+
+#header input[type=text] {
+  flex: 3;
+}
+
+#header input {
+  padding: 10px;
+}
+
+.Forms .textarea {
+  border-bottom: 1px solid lightgrey;
+}
+
+.Forms .error {
+  color: tomato;
+}
+
+.Forms .error + input {
+  border: 1px solid tomato;
+}
+
+.Forms legend {
+  text-transform: capitalize;
+}
