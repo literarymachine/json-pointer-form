@@ -1,8 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-.Forms form::after {
+.Forms::after {
   content: '';
   display: block;
   clear: both;
@@ -26,129 +22,205 @@
   clear: both;
 }
 .Forms input[type=text],
-.Forms textarea {
-  padding: 10px 5px;
-}
 .Forms input[type=submit],
-.Forms select {
-  padding: 10px 5px;
+.Forms select,
+.Forms textarea {
+  padding: 10px;
+  border: 1px solid lightgrey;
+}
+.Forms .textarea {
+  border: 1px solid lightgrey;
+  border-bottom: 0;
+}
+.Forms textarea {
+  position: relative;
+  min-height: 144px;
+  resize: vertical;
+  width: 100%;
+  border: none;
 }
 .Forms input[type=submit] {
   margin-top: 15px;
   padding: 10px;
-  float: right;
+  cursor: pointer;
 }
 .Forms legend {
   padding: 10px 0;
 }
-.Forms form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  position: relative;
-}
-.Forms form div > label {
-  padding: 10px 0;
-}
-.Forms form div ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  position: absolute;
-  width: 100%;
-  max-height: 160px;
-  overflow: auto;
-  bottom: 0;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  border: 1px solid black;
-  z-index: 3;
-}
-.Forms form div ul li input[type=checkbox] {
+.Forms .input.\@value .title, .Forms .textarea.\@value .title {
   display: none;
 }
-.Forms form div ul li:last-child label {
-  border-bottom: none;
+.Forms .input label.hidden + input, .Forms .textarea label.hidden + input {
+  margin-top: 10px;
 }
-.Forms form div ul li label {
+.Forms .input input[type="text"], .Forms .textarea input[type="text"] {
+  width: 100%;
+}
+.Forms div {
+  position: relative;
+}
+.Forms div > label {
   display: block;
-  padding: 10px 5px;
-  border-bottom: 1px solid black;
-  background-color: white;
-}
-.Forms form div ul li label::after {
-  content: '✔';
-  position: absolute;
-  right: 15px;
-}
-.Forms form > div {
-  margin: 10px 0;
+  padding: 10px 0;
 }
 .Forms .checkbox input[type=checkbox] {
   display: none;
 }
 .Forms .checkbox label {
   display: block;
-  padding: 10px 5px;
+  padding: 10px;
+  padding-right: 35px;
   position: relative;
   cursor: pointer;
   margin-bottom: 5px;
+  border: 1px solid lightgray;
 }
 .Forms .checkbox label::after {
   content: 'x';
   position: absolute;
   right: 15px;
-  top: 0;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
   font-size: 14.4px;
   font-size: 0.9rem;
   font-weight: bold;
 }
 .Forms .dropdown {
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
-.Forms .multiple-container .input:first-child input {
-  margin-top: 0;
+.Forms .dropdown ul {
+  list-style-type: none;
 }
-.Forms .multiple-container .input:first-child label.title {
+.Forms .dropdown > ul {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  max-height: 200px;
+  width: 100%;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid lightgrey;
+}
+.Forms .dropdown li {
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+}
+.Forms .dropdown li input[type=checkbox] {
+  display: none;
+}
+.Forms .dropdown li label {
+  padding: 10px;
   display: block;
 }
-.Forms .multiple-container .input input {
-  margin-top: 5px;
+.Forms .dropdown li:last-child {
+  border-bottom: none;
 }
-.Forms .multiple-container .input input[placeholder="sameAs"] + label {
+.Forms .toggleDropdown {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  padding-right: 20px;
+}
+.Forms .optionlistContainer {
+  margin-bottom: 10px;
+}
+.Forms .optionlistContainer .optionlist {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+.Forms .optionlistContainer .optionlist input[type=checkbox] {
   display: none;
 }
-.Forms .select {
+.Forms .optionlistContainer .optionlist label {
+  display: block;
+  padding: 10px;
+  padding-right: 35px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border: 1px solid lightgray;
+}
+.Forms .optionlistContainer .optionlist label::after {
+  content: 'x';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.Forms .dropdownList {
+  border: 1px solid lightgray;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+.Forms .dropdownList > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 400px;
+}
+.Forms .dropdownList .filter {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+.Forms .dropdownList input[type=checkbox] {
+  display: none;
+}
+.Forms .dropdownList li {
+  border-bottom: 1px solid lightgray;
+}
+.Forms .dropdownList li label {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.Forms .dropdownList li:last-child {
+  border-bottom: 0;
+}
+.Forms .multiple-container {
+  margin-bottom: 5px;
+}
+.Forms .input + .optionlistContainer {
   margin-top: 10px;
 }
-.Forms .select label {
-  display: none;
+.Forms .input.\@value input[type="text"] {
+  width: 75%;
+  float: left;
+  margin-bottom: 10px;
+  border-right: none;
+}
+.Forms .input.\@value + .optionlistContainer {
+  width: 25%;
+  float: right;
+  margin-top: 0;
+}
+.Forms .input.\@value + .optionlistContainer .optionlist {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.Forms .input.\@value + .optionlistContainer .toggleDropdown {
+  text-align: left;
+}
+.Forms {
+  /* Fields hidden in the schema */
 }
 .Forms .hidden {
   display: none;
