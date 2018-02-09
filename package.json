@@ -17,7 +17,7 @@
     "babel-preset-react": "^6.24.1"
   },
   "dependencies": {
-    "ajv": "^6.1.0",
+    "ajv": "^4.11.5",
     "babel-cli": "^6.26.0",
     "json-pointer": "^0.6.0",
     "lodash": "^4.17.4",
