@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "ajv": "^4.11.5",
+    "babel-cli": "^6.26.0",
     "json-pointer": "^0.6.0",
     "lodash": "^4.17.4",
     "normalize.css": "^7.0.0",
