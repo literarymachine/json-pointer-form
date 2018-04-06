@@ -91,7 +91,21 @@ class App extends React.Component {
               <Composer
                 value={this.state.value}
                 schema={this.state.schema}
-                submit={value => { this.setState({value}); window.scroll(0,0) }}
+                submit={value => {
+                  value.about && value.about.forEach(esc => {
+                    fetch(`http://localhost:3000/inbox?target=${esc['@id']}`, {
+                      method: 'post',
+                      mode: 'cors',
+                      headers: {
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(value)
+                    }).then(res=>res.json())
+                      .then(res => console.log(res))
+                  })
+                  this.setState({value})
+                  window.scroll(0,0)
+                }}
                 change={value => { this.setState({value}) }}
                 getOptions={this.getOptions}
                 getLabel={value => value && value["name"] ? value["name"][0]["@value"] : value["@id"]}
